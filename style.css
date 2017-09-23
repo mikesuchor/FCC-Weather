@@ -1,0 +1,72 @@
+body {
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.screen {
+  width: 320px;
+  height: 568px;
+  padding: 10px 24px;
+  background: #d9dbdc;
+  margin: auto;
+  border: 30px solid #000;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px #000;
+  user-select: none;
+  font-family: 'Yantramanav', sans-serif;
+  color: #fff;
+}
+
+.location {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 30px;
+}
+
+.weathericon {
+  position: relative;
+  top: 350px;
+}
+
+.weathertype {
+  position: relative;
+  top: 330px;
+  font-size: 25px;
+}
+
+.maxmin {
+  position: relative;
+  top: 340px;
+  font-size: 25px;
+}
+
+.fa-angle-up {
+  color: #0b0;
+}
+
+.fa-angle-down {
+  color: #f00;
+}
+
+.degrees {
+  position: relative;
+  top: 335px;
+  left: -15px;
+  font-size: 140px;
+}
+
+.units {
+  position: relative;
+  top: 280px;
+  left: 270px;
+  font-size: 30px;
+}
+
+.divider, .fahrenheit {
+  color: #777;
+}
+
+.celcius, .fahrenheit {
+  cursor: pointer;
+}
