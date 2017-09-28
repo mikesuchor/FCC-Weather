@@ -28,7 +28,7 @@ $(document).ready(function() {
 
   /* Pass the latitude and longitude into the api link */
   function getWeather(latitude, longitude) {
-    apiurl =
+    var apiurl =
       "https://fcc-weather-api.glitch.me/api/current?lat=" +
       latitude +
       "&lon=" +
@@ -47,18 +47,43 @@ $(document).ready(function() {
     });
   }
 
-  /* Change the background image based on the weather type */
+  /* Change the background image based on the weather type, not sure if there's a way to see all the options available as there's no documentation */
   function checkWeatherType(type) {
     if (type === "Clouds") {
       $(".screen").css(
         "background-image",
         "url(" +
-          "https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" +
+          "https://static.pexels.com/photos/129539/pexels-photo-129539.jpeg" +
           ")"
       );
-      $(".screen").css("background-size", "340%");
+    } else if (type === "Smoke") {
+      $(".screen").css(
+        "background-image",
+        "url(" +
+          "https://static.pexels.com/photos/167699/pexels-photo-167699.jpeg" +
+          ")"
+      );
     } else if (type === "Clear") {
-      return;
+      $(".screen").css(
+        "background-image",
+        "url(" +
+          "https://static.pexels.com/photos/281260/pexels-photo-281260.jpeg" +
+          ")"
+      );
+    } else if (type === "Thunderstorm") {
+      $(".screen").css(
+        "background-image",
+        "url(" +
+          "https://static.pexels.com/photos/53459/lightning-storm-weather-sky-53459.jpeg" +
+          ")"
+      );
+    } else if (type === "Rain") {
+      $(".screen").css(
+        "background-image",
+        "url(" +
+          "https://static.pexels.com/photos/125510/pexels-photo-125510.jpeg" +
+          ")"
+      );
     }
   }
   
