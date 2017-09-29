@@ -67,7 +67,7 @@ $(document).ready(function() {
       $(".screen").css(
         "background-image",
         "url(" +
-          "https://static.pexels.com/photos/281260/pexels-photo-281260.jpeg" +
+          "https://static.pexels.com/photos/544554/pexels-photo-544554.jpeg" +
           ")"
       );
     } else if (type === "Thunderstorm") {
