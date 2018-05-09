@@ -33,7 +33,9 @@ if (navigator.geolocation) {
 function getWeather(latitude, longitude) {
   var apiurl = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
   /* Get the JSON and get the location, icon, weather type, and max, min, and current temperatures */
-  $.getJSON(apiurl, function(json) {
+  fetch(apiurl)
+  .then(response => response.json())
+  .then(json => {
     degrees = json.main.temp;
     weathertype = json.weather[0].main;
     checkWeatherType(weathertype);
