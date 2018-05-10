@@ -4,10 +4,6 @@
 3. I can push a button to toggle between Fahrenheit and Celsius.
 */
 
-/* Version 2 Wish List
-1. Remove jQuery.
-*/
-
 /* Bugs List
 1. Sometimes showing Shuzenji as location.
 */
@@ -46,6 +42,21 @@ function getWeather(latitude, longitude) {
     $('.temp_min').html(`${json.main.temp_min}&deg;`);
     $('.degrees').html(`${degrees}&deg;`);
   });
+
+  // var apiurl2 = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=438fb02e04e57100411d420c1ae62962`;
+  // fetch(apiurl2)
+  // .then(response => response.json())
+  // .then(json => {
+  //   degrees = json.main.temp;
+  //   weathertype = json.weather[0].main;
+  //   checkWeatherType(weathertype);
+  //   $('.location').html(json.name);
+  //   $('.weathericon').html(`<img src='${json.weather[0].icon}'>`);
+  //   $('.weathertype').html(weathertype);
+  //   $('.temp_max').html(`${json.main.temp_max}&deg;`);
+  //   $('.temp_min').html(`${json.main.temp_min}&deg;`);
+  //   $('.degrees').html(`${degrees}&deg;`);
+  // });
 }
 
 /* Change the background image based on the weather type, not sure if there's a way to see all the options available as there's no documentation */
