@@ -1,44 +1,53 @@
 body {
-  background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #222;
 }
 
-.screen {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
   width: 320px;
   height: 568px;
-  padding: 10px 24px;
   background: #d9dbdc;
-  background-size: 300%;
-  margin: auto;
+  background-size: auto 100%;
   border: 30px solid #000;
-  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px #000;
+  text-shadow: 2px 2px #000;
   user-select: none;
   font-family: 'Yantramanav', sans-serif;
   color: #fff;
 }
 
-.location {
+.location-section {
+  flex: 1 1;
   text-align: center;
-  padding-top: 5px;
   font-size: 30px;
+  line-height: 50px;
+  background-color: rgba(0,0,0,0.5);
 }
 
-.weathericon {
-  position: relative;
-  top: 350px;
+.image-pane-section {
+  flex: 1 1 100%;
+}
+
+.weather-section {
+  flex: 1 1;
+  background-color: rgba(10, 4, 4, 0.8);
+}
+
+.temperature-section {
+  flex: 1 1;
+  background-color: rgba(10, 4, 4, 0.8);
 }
 
 .weathertype {
-  position: relative;
-  top: 330px;
   font-size: 25px;
+  position: relative;
+  bottom: 18px;
 }
 
-.maxmin {
-  position: relative;
-  top: 340px;
+.temp_maxmin {
+  padding-left: 15px;
   font-size: 25px;
 }
 
@@ -51,17 +60,14 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
 }
 
 .degrees {
-  position: relative;
-  top: 335px;
-  left: -15px;
+  text-align: center;
   font-size: 140px;
 }
 
 .units {
-  position: relative;
-  top: 280px;
-  left: 270px;
+  text-align: right;
   font-size: 30px;
+  padding-right: 10px;
 }
 
 .divider, .fahrenheit {
@@ -70,4 +76,10 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
 
 .celcius, .fahrenheit {
   cursor: pointer;
+}
+
+@media all and (max-width: 380px) {
+  .container {
+    width: calc(100% - 60px);
+  }
 }
